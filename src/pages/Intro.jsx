@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import hero from "../assets/images/hero.jpg";
 import intro from "../assets/images/intro.mp4";
 import { gsap } from "gsap";
+import ButtonLink from "../components/element/Button";
+import { Route, NavLink, Link } from "react-router-dom";
+import Header from "../components/section/Header";
+import Footer from "../components/section/Footer";
 
 const Intro = () => {
     const [showIntro, setShowIntro] = useState(true);
@@ -85,20 +89,7 @@ const Intro = () => {
             {!showIntro && (
                 <main className="relative">
                     {/* Navbar */}
-                    <header className="top-0 left-0 w-full z-30 flex fixed justify-between items-center p-6 text-white">
-                        <h2 className="text-2xl font-bold">Apliancor</h2>
-                        <nav className="space-x-6">
-                            <a href="#hero" className="hover:underline">
-                                Inicio
-                            </a>
-                            <a href="#beneficios" className="hover:underline">
-                                Beneficios
-                            </a>
-                            <a href="#contacto" className="hover:underline">
-                                Contacto
-                            </a>
-                        </nav>
-                    </header>
+                    <Header />
 
                     {/* Hero */}
                     <section
@@ -110,6 +101,9 @@ const Intro = () => {
                         <h2 className="relative z-10 text-white text-5xl font-bold drop-shadow-lg">
                             Impermeabilización con Poliurea
                         </h2>
+
+                        <ButtonLink to='/beneficios'>ESTO ES UN BOTON</ButtonLink>
+
                     </section>
 
                     {/* Beneficios */}
@@ -131,10 +125,7 @@ const Intro = () => {
                     </section>
 
                     {/* Footer */}
-                    <footer className="bg-black text-white py-6 text-center">
-                        © 1980- {new Date().getFullYear()} Apliancor - Todos los derechos
-                        reservados.
-                    </footer>
+                    <Footer />
                 </main>
             )}
         </div>

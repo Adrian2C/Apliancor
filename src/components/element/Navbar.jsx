@@ -1,9 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = ({ onClose }) => {
     return (
-        <div className="md:hidden bg-[#1e1e1e] px-4 pb-4">
+        <div className=" bg-[#1e1e1e] px-4 pb-4">
             <div className="mt-2">
                 <ul className="flex flex-col gap-2 font-bold">
                     <li>
